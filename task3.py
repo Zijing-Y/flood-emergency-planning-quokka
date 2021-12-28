@@ -26,3 +26,4 @@ index.nearest(q_user, num_results=1, objects=True)
 q_highest = (qh_x, qh_y)
 # identify the nearest itn node to the highest
 index.nearest(q_highest, num_results=1, objects=True)
+
