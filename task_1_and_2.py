@@ -16,13 +16,15 @@ def get_location():
         location = Point(easting, northing)
         # Check if user is in the area
         if test_range.contains(location):
-            print('Continue')
+            print('User location:', location)
             return location
         else:
             print('Out of range,please check your input is within range.')
             exit()
     except ValueError:
         print('Invalid data type')
+
+# Task 2
 
 
 def highest_point(location):
@@ -60,9 +62,10 @@ def highest_point(location):
                                                         highest_row,
                                                         highest_col,
                                                         offset='center')
+    hp = Point(highest_east, highest_north)
+    print('The highest point within a 5km radius is', hp, 'and the altitude is', highest_value, 'm')
     return highest_east, highest_north
 
 
-point = get_location()
-a = highest_point(point)
-print(a)
+location = get_location()
+high_point = highest_point(location)
